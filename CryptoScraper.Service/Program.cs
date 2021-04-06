@@ -16,7 +16,7 @@ namespace KeywordScraper.Service
 
             //TEMPORARY TEST code that calls KeyWordScrapperRequestSender
             var temprequestsender = new KeywordGrabberRequestSender();
-            var tempResult = temprequestsender.GetAllTimeInterest("test").Result;
+            var tempResult = temprequestsender.GetAllTimeInterest("ethereum").Result;
         }
     }
 }

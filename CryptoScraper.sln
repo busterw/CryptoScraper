@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29009.5
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrpytoScraper.KeywordLogic", "KeywordLogic\CrpytoScraper.KeywordLogic.csproj", "{0D3D0B47-C926-4007-A4A1-94F1ED7F1756}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CryptoScraper.KeywordLogic", "CryptoScraper.KeywordLogic\CryptoScraper.KeywordLogic.csproj", "{10E49121-4D48-46DC-A3E2-B6D764D39753}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryptoScraper.Service", "KeywordScraper.Service\CryptoScraper.Service.csproj", "{60F7660D-4D53-4644-BA19-3662D1FDC2FA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CryptoScraper.Models", "CryptoScraper.Models\CryptoScraper.Models.csproj", "{884BB597-4C1A-414C-A0C0-E0B9E0C33E3C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CryptoScraper.Models", "CryptoScraper.Models\CryptoScraper.Models.csproj", "{44832680-7548-47C5-93FE-B84DC5065556}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CryptoScraper.Service", "CryptoScraper.Service\CryptoScraper.Service.csproj", "{C0A68F9C-1DAF-45B2-944C-9EFF4BB2B182}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,18 +15,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0D3D0B47-C926-4007-A4A1-94F1ED7F1756}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0D3D0B47-C926-4007-A4A1-94F1ED7F1756}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0D3D0B47-C926-4007-A4A1-94F1ED7F1756}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0D3D0B47-C926-4007-A4A1-94F1ED7F1756}.Release|Any CPU.Build.0 = Release|Any CPU
-		{60F7660D-4D53-4644-BA19-3662D1FDC2FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{60F7660D-4D53-4644-BA19-3662D1FDC2FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{60F7660D-4D53-4644-BA19-3662D1FDC2FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{60F7660D-4D53-4644-BA19-3662D1FDC2FA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{44832680-7548-47C5-93FE-B84DC5065556}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{44832680-7548-47C5-93FE-B84DC5065556}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{44832680-7548-47C5-93FE-B84DC5065556}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{44832680-7548-47C5-93FE-B84DC5065556}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10E49121-4D48-46DC-A3E2-B6D764D39753}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10E49121-4D48-46DC-A3E2-B6D764D39753}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10E49121-4D48-46DC-A3E2-B6D764D39753}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10E49121-4D48-46DC-A3E2-B6D764D39753}.Release|Any CPU.Build.0 = Release|Any CPU
+		{884BB597-4C1A-414C-A0C0-E0B9E0C33E3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{884BB597-4C1A-414C-A0C0-E0B9E0C33E3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{884BB597-4C1A-414C-A0C0-E0B9E0C33E3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{884BB597-4C1A-414C-A0C0-E0B9E0C33E3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0A68F9C-1DAF-45B2-944C-9EFF4BB2B182}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0A68F9C-1DAF-45B2-944C-9EFF4BB2B182}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0A68F9C-1DAF-45B2-944C-9EFF4BB2B182}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0A68F9C-1DAF-45B2-944C-9EFF4BB2B182}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -10,7 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\KeywordLogic\CrpytoScraper.KeywordLogic.csproj" />
+    <ProjectReference Include="..\CryptoScraper.KeywordLogic\CryptoScraper.KeywordLogic.csproj" />
   </ItemGroup>
 
 </Project>

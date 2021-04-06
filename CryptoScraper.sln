@@ -5,9 +5,9 @@ VisualStudioVersion = 16.0.29009.5
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrpytoScraper.KeywordLogic", "KeywordLogic\CrpytoScraper.KeywordLogic.csproj", "{0D3D0B47-C926-4007-A4A1-94F1ED7F1756}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryptoScraper.Models", "CryptoScrapper.Models\CryptoScraper.Models.csproj", "{4C164CB2-F68B-47FC-AE32-CA9FDFA1A7C6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryptoScraper.Service", "KeywordScraper.Service\CryptoScraper.Service.csproj", "{60F7660D-4D53-4644-BA19-3662D1FDC2FA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeywordScraper.Service", "KeywordScraper.Service\KeywordScraper.Service.csproj", "{60F7660D-4D53-4644-BA19-3662D1FDC2FA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CryptoScraper.Models", "CryptoScraper.Models\CryptoScraper.Models.csproj", "{44832680-7548-47C5-93FE-B84DC5065556}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,14 +19,14 @@ Global
 		{0D3D0B47-C926-4007-A4A1-94F1ED7F1756}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D3D0B47-C926-4007-A4A1-94F1ED7F1756}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D3D0B47-C926-4007-A4A1-94F1ED7F1756}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4C164CB2-F68B-47FC-AE32-CA9FDFA1A7C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4C164CB2-F68B-47FC-AE32-CA9FDFA1A7C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4C164CB2-F68B-47FC-AE32-CA9FDFA1A7C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4C164CB2-F68B-47FC-AE32-CA9FDFA1A7C6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{60F7660D-4D53-4644-BA19-3662D1FDC2FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{60F7660D-4D53-4644-BA19-3662D1FDC2FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{60F7660D-4D53-4644-BA19-3662D1FDC2FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{60F7660D-4D53-4644-BA19-3662D1FDC2FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44832680-7548-47C5-93FE-B84DC5065556}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44832680-7548-47C5-93FE-B84DC5065556}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44832680-7548-47C5-93FE-B84DC5065556}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44832680-7548-47C5-93FE-B84DC5065556}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

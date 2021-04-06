@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CryptoScrapper.Models\CryptoScraper.Models.csproj" />
+    <ProjectReference Include="..\CryptoScraper.Models\CryptoScraper.Models.csproj" />
   </ItemGroup>
 
 </Project>

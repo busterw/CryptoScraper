@@ -10,12 +10,12 @@ namespace KeywordScraper.Service
         static void Main(string[] args)
         {
             var sp = new ServiceCollection()
-                .AddTransient<IKeywordGrabberRequestSender, KeywordGrabberRequestSender>()
+                .AddTransient<IKeywordRequestSender, KeywordRequestSender>()
                 .BuildServiceProvider();
 
 
             //TEMPORARY TEST code that calls KeyWordScrapperRequestSender
-            var temprequestsender = new KeywordGrabberRequestSender();
+            var temprequestsender = new KeywordRequestSender();
             var tempResult = temprequestsender.GetAllTimeInterest("ethereum").Result;
         }
     }

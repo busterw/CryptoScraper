@@ -10,8 +10,8 @@ namespace CrpytoScraper.KeywordLogic.Implementations
 {
     public class KeywordResponseHandler
     {
-        private readonly IKeywordGrabberRequestSender _keywordGrabberRequestSender;
-        public KeywordResponseHandler(IKeywordGrabberRequestSender keywordGrabberRequestSender)
+        private readonly IKeywordRequestSender _keywordGrabberRequestSender;
+        public KeywordResponseHandler(IKeywordRequestSender keywordGrabberRequestSender)
         {
             _keywordGrabberRequestSender = keywordGrabberRequestSender;
         }

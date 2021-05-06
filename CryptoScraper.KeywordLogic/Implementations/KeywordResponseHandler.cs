@@ -1,9 +1,6 @@
 ﻿using CryptoScraper.KeywordLogic.Abstractions;
 using CryptoScraper.Models;
 using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace CrpytoScraper.KeywordLogic.Implementations

@@ -5,7 +5,7 @@ namespace CryptoScraper.KeywordLogic.Abstractions
 {
     public interface IKeywordRequestSender
     {
-        Task<string> GetAllTimeInterest(string keyword);
-        Task<string> GetInterestForTimePeriod(string keyword, InterestPeriod interestPeriod);
+        Task<KeywordData> GetAllTimeInterest(string keyword);
+        Task<KeywordData> GetInterestForTimePeriod(string keyword, InterestPeriod interestPeriod);
     }
 }

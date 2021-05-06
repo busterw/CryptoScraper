@@ -14,13 +14,10 @@ namespace CrpytoScraper.KeywordLogic.Implementations
         private readonly HttpClient _httpClient;
         public KeywordRequestSender(HttpClient httpClient) => _httpClient = httpClient;
 
-        public async Task<string> GetAllTimeInterest(string keyword)
+        public async Task<KeywordData> GetAllTimeInterest(string keyword)
         {
             var requestMessage = new HttpRequestMessage(HttpMethod.Get,
-                _httpClient.BaseAddress
-                + RequestName.InterestOverTimeAll.ToString()
-                + '/'
-                + keyword);
+                $"{_httpClient.BaseAddress}{RequestName.InterestOverTimeAll.ToString()}/{keyword}");
 
             var response = await _httpClient.SendAsync(requestMessage);
 
@@ -31,10 +28,10 @@ namespace CrpytoScraper.KeywordLogic.Implementations
 
             var content = await response.Content.ReadAsStringAsync();
 
-            return SanitiseJson(content);
+            return JsonConvert.DeserializeObject<KeywordData>(SanitiseJson(content));
         }
 
-        public async Task<string> GetInterestForTimePeriod(string keyword, InterestPeriod interestPeriod)
+        public async Task<KeywordData> GetInterestForTimePeriod(string keyword, InterestPeriod interestPeriod)
         {
             var requestMessage = new HttpRequestMessage(HttpMethod.Get,
                $"{_httpClient.BaseAddress}{RequestName.InterestOverTime.ToString()}/{keyword}/{interestPeriod.ToString()}");
@@ -48,7 +45,7 @@ namespace CrpytoScraper.KeywordLogic.Implementations
 
             var content = await response.Content.ReadAsStringAsync();
 
-            return SanitiseJson(content);
+            return JsonConvert.DeserializeObject<KeywordData>(SanitiseJson(content));
         }
 
         /// <summary>

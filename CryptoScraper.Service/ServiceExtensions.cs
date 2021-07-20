@@ -9,9 +9,9 @@ namespace CryptoScraper.Service
 {
     public static class ServiceExtensions
     {
-        public static void AddRequestSender(this ServiceCollection services, IConfiguration configuration)
+        public static IServiceCollection AddRequestSender(this ServiceCollection services, IConfiguration configuration)
         {
-            services.AddTransient(
+            return services.AddSingleton<IKeywordRequestSender, KeywordRequestSender>(
                 sp => new KeywordRequestSender(
                     new HttpClient
                     {

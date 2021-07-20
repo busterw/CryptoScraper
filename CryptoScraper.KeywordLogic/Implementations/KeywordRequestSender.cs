@@ -14,7 +14,7 @@ namespace CrpytoScraper.KeywordLogic.Implementations
         private readonly HttpClient _httpClient;
         public KeywordRequestSender(HttpClient httpClient) => _httpClient = httpClient;
 
-        public async Task<KeywordData> GetAllTimeInterest(string keyword)
+        public async Task<TimelineDataWithAverages> GetAllTimeInterest(string keyword)
         {
             var requestMessage = new HttpRequestMessage(HttpMethod.Get,
                 $"{_httpClient.BaseAddress}{RequestName.InterestOverTimeAll.ToString()}/{keyword}");
@@ -28,10 +28,14 @@ namespace CrpytoScraper.KeywordLogic.Implementations
 
             var content = await response.Content.ReadAsStringAsync();
 
-            return JsonConvert.DeserializeObject<KeywordData>(SanitiseJson(content));
+            var jsonRootContent = JsonConvert.DeserializeObject<JsonRoot>(content);
+
+            var rootContent = JsonConvert.DeserializeObject<Root>(jsonRootContent.Body);
+
+            return rootContent.Default;
         }
 
-        public async Task<KeywordData> GetInterestForTimePeriod(string keyword, InterestPeriod interestPeriod)
+        public async Task<TimelineDataWithAverages> GetInterestForTimePeriod(string keyword, InterestPeriod interestPeriod)
         {
             var requestMessage = new HttpRequestMessage(HttpMethod.Get,
                $"{_httpClient.BaseAddress}{RequestName.InterestOverTime.ToString()}/{keyword}/{interestPeriod.ToString()}");
@@ -45,15 +49,11 @@ namespace CrpytoScraper.KeywordLogic.Implementations
 
             var content = await response.Content.ReadAsStringAsync();
 
-            return JsonConvert.DeserializeObject<KeywordData>(SanitiseJson(content));
-        }
+            var jsonRootContent = JsonConvert.DeserializeObject<JsonRoot>(content);
 
-        /// <summary>
-        /// Json object returned from google-trends-api has unwanted filler in the beginning and end,
-        /// specifically the first 23 characters, and the last 19 characters. Probably a more readable
-        /// way to do this.
-        /// </summary>
-        private static string SanitiseJson(string json)
-            => '{' + json.Substring(0, json.Length - 19).Substring(23).Replace("\\", string.Empty) + '}';
+            var rootContent = JsonConvert.DeserializeObject<Root>(jsonRootContent.Body);
+
+            return rootContent.Default;
+        }
     }
 }

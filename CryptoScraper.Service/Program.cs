@@ -1,8 +1,10 @@
 ﻿using CrpytoScraper.KeywordLogic.Implementations;
 using CryptoScraper.KeywordLogic.Abstractions;
+using CryptoScraper.KeywordLogic.Implementations;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
+using System.Net.Http;
 
 namespace CryptoScraper.Service
 {
@@ -17,11 +19,14 @@ namespace CryptoScraper.Service
             var services = new ServiceCollection();
 
             services.AddRequestSender(configuration);
+            services.AddTransient<IKeywordDataAggregator, KeywordDataAggregator>();
+
             var provider = services.BuildServiceProvider();
 
             //TEMPORARY TEST code that calls KeyWordScrapperRequestSender
-            var temprequestsender = provider.GetRequiredService<KeywordRequestSender>();
-            var tempResult = temprequestsender.GetAllTimeInterest("ethereum").Result;
+            var consoler = new ConsoleWriter(provider.GetRequiredService<IKeywordDataAggregator>());
+
+            consoler.PrintStats("ETH", "Week").Wait();
         }
     }
 }
